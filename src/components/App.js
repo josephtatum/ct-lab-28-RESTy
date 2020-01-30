@@ -22,11 +22,19 @@ export default class App extends Component {
 
   }
 
+  handleFormChange = ({ target }) => {
+    if(target.name === 'routeMethod') {
+      this.setState({ [target.name]: target.id });
+    } else {
+      this.setState({ [target.name]: target.value });
+    }
+  }
+
   render() {
     return <>
       <Header />
       <History />
-      <Form />
+      <Form handleChange={this.handleFormChange}/>
       <Results />
       <Footer />
     </>;
