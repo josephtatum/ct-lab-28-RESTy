@@ -34,14 +34,14 @@ export default class App extends Component {
       .then(res => res.json())
       .then(res => {
         console.log(res);
-        this.setState({ response: res });
+        this.setState({ response: res, history: [...this.state.history, this.state.apiUrl] });
       });
   }
 
   render() {
     return <>
       <Header />
-      <History />
+      <History history={this.state.history}/>
       <Form
         onChange={this.handleFormChange}
         onSubmit={this.handleFormSubmit}
