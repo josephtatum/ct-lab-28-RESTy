@@ -18,23 +18,34 @@ export default class App extends Component {
     history: [],
   }
 
-  componentDidMount() {
-
-  }
-
   handleFormChange = ({ target }) => {
     if(target.name === 'routeMethod') {
       this.setState({ [target.name]: target.id });
+    } else if(target.name === 'jsonBody') {
+      this.setState({ [target.name]: JSON.parse(target.value) });
     } else {
       this.setState({ [target.name]: target.value });
     }
+  }
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    fetch(this.state.apiUrl)
+      .then(res => res.json())
+      .then(res => {
+        console.log(res);
+        this.setState({ response: res });
+      });
   }
 
   render() {
     return <>
       <Header />
       <History />
-      <Form handleChange={this.handleFormChange}/>
+      <Form
+        onChange={this.handleFormChange}
+        onSubmit={this.handleFormSubmit}
+      />
       <Results />
       <Footer />
     </>;
