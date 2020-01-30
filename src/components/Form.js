@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Form() {
-  return <form>
+  return <form className="api-form">
 
     <input type="text" placeholder="API Route"></input>
 
@@ -26,6 +26,6 @@ export default function Form() {
     <input type="text" placeholder="Bearer Token"></input>
 
     <button type="submit">Go</button>
-    
+
   </form>;
 }

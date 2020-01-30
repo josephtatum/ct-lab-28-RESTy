@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Results() {
-  return <div className="results-section">
-
-  </div>;
+  return <>
+    <h2>Results</h2>
+    <div className="results-section">
+    </div>
+  </>;
 }
