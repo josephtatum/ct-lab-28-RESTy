@@ -46,7 +46,7 @@ export default class App extends Component {
         onChange={this.handleFormChange}
         onSubmit={this.handleFormSubmit}
       />
-      <Results />
+      <Results response={this.state.response}/>
       <Footer />
     </>;
   }
