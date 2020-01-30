@@ -18,13 +18,13 @@ export default function Form({ handleChange }) {
     <input type="radio" id="delete" name="routeMethod" onChange={handleChange}></input>
     <label htmlFor="delete">Delete</label>
 
-    <textarea placeholder="Raw JSON Body"></textarea>
+    <textarea placeholder="Raw JSON Body" name="jsonBody" onChange={handleChange}></textarea>
     <h2>Headers</h2>
     <h3>Basic Authorization</h3>
-    <input type="text" placeholder="Username"></input>
-    <input type="password" placeholder="Password"></input>
+    <input type="text" placeholder="Username" name="authUsername" onChange={handleChange}></input>
+    <input type="password" placeholder="Password" name="authPassword" onChange={handleChange}></input>
     <h3>Bearer Authorization</h3>
-    <input type="text" placeholder="Bearer Token"></input>
+    <input type="text" placeholder="Bearer Token" name="bearerToken" onChange={handleChange}></input>
 
     <button type="submit">Go</button>
 
