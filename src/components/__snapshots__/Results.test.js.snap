@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results component renders Results 1`] = `
+<Fragment>
+  <h2>
+    Results
+  </h2>
+  <div
+    className="results-section"
+  >
+    <pre>
+      "test"
+    </pre>
+  </div>
+</Fragment>
+`;

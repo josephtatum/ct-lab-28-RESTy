@@ -11,5 +11,5 @@ export default function Results({ response }) {
 }
 
 Results.propTypes = {
-  response: propTypes.object.isRequired
+  response: propTypes.string.isRequired
 };

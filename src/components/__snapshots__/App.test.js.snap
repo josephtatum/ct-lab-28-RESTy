@@ -1,7 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders App 1`] = `
-<h1>
-  Hello World
-</h1>
+<Fragment>
+  <Header />
+  <div
+    className="main-container"
+  >
+    <History
+      history={Array []}
+    />
+    <div
+      className="secondary-container"
+    >
+      <Form
+        onChange={[Function]}
+        onSubmit={[Function]}
+      />
+      <Results
+        response=""
+      />
+    </div>
+  </div>
+  <Footer />
+</Fragment>
 `;
