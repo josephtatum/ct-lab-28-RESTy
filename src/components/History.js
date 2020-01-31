@@ -9,12 +9,14 @@ export default function History({ history }) {
     </li>
   ));
 
-  return <>
-    <h2>History</h2>
-    <ul className="history-list">
-      {historyListItems}
-    </ul>
-  </>;
+  return (
+    <div className="history-section">
+      <h2>History</h2>
+      <ul className="history-list">
+        {historyListItems}
+      </ul>
+    </div>
+  );
 }
 
 History.propTypes = {

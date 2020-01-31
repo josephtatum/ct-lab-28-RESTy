@@ -1,11 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 export default function Results({ response }) {
   return <>
     <h2>Results</h2>
     <div className="results-section">
-      {response}
+      <pre>{JSON.stringify(response, null, 2)}</pre>
     </div>
   </>;
 }
+
+Results.propTypes = {
+  response: propTypes.object.isRequired
+};
